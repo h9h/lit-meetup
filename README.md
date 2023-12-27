@@ -9,4 +9,7 @@ Meetup des IT-Labs der SV informatik zum Thema https://lit.dev/
 ```javascript
 npm run serve
 ```
-Demo-Seiten unter http://localhost:3000
+
+- Demo-Seiten unter http://localhost:3000
+- Öffne die Entwicklertools
+
