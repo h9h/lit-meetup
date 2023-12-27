@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Demos f&uuml;r Lit Meetup</title>
-    <link rel="stylesheet" href="app.css">
+    <title>Lit Meetup</title>
+    <style>
+        body {
+            background: white;
+            font-family: sans-serif;
+        }
+        section {
+            background: lightgray;
+            color: black;
+            border-radius: 1em;
+            padding: 5em;
+            position: absolute;
+            top: 400px;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+        }        
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 3em;
+            margin-bottom: 0.25em;
+            margin-top: 2em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Demos für Lit Meetup</h1>
-    <ul>
-        <li><a href="ce-lifecycle.html">Custom Element Lifecycle</a></li>
-        <li><a href="shadow-dom.html">Shadow Dom</a></li>
-    </ul>
+    <h1>Lit Meetup - Demos</h1>
+    <section>
+            <ul>
+                <li><a href="ce-lifecycle.html">Custom Element Lifecycle</a></li>
+                <li><a href="shadow-dom.html">Shadow Dom</a></li>
+            </ul>
+    </section>
 </body>
 </html>

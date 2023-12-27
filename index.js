@@ -30,6 +30,7 @@ http.createServer((request, response) => {
     let contentType = mimeTypes[extname] || 'application/octet-stream';
 
     fs.readFile(filePath, {encoding: "utf-8"}, function(error, content) {
+        console.log('read file ', filePath);
         if (error) {
             if(error.code == 'ENOENT') {
                 fs.readFile('public/404.html', function(error, content) {
@@ -43,7 +44,15 @@ http.createServer((request, response) => {
             }
         }
         else {
-            response.writeHead(200, { 'Content-Type': contentType });
+            response.writeHead(200, 
+                { 
+                    'Content-Type': contentType, 
+                    encoding: "UTF-8",
+                    "Cache-Control": "no-cache, no-store, must-revalidate",
+                    "Pragma": "no-cache",
+                    "Expires": "0"
+                }
+            );
             response.end(content, 'utf-8');
         }
     });
