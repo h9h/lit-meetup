@@ -1,0 +1,17 @@
+{
+  "name": "lit-meetup",
+  "version": "1.0.0",
+  "description": "Examples for Lit mMeetup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js"
+  },
+  "keywords": [
+    "lit",
+    "js",
+    "custom-element"
+  ],
+  "author": "Michael Heinke",
+  "license": "ISC"
+}

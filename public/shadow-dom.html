@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Shadow Dom</title>
+    <style>
+        span { 
+            background-color: silver; 
+        }
+    </style>
+</head>
+<body>
+    <div id="host"></div>
+    <span>I'm <em>not</em> in the shadow DOM</span>
+
+    <script>
+        const sheet = new CSSStyleSheet();
+        // Synchronously replace the content of the stylesheet given by the textual representation
+        sheet.replaceSync(`span { 
+                                color: red; border: 2px dotted black;
+                           }`
+                         );
+            
+        const host = document.querySelector("#host");
+
+        const shadow = host.attachShadow({ mode: "open" });
+        // mode open: shadow DOM is accessible from outside
+        // mode closed: shadow DOM is not accessible from outside - host.shadowRoot = null
+
+        // shadow.adoptedStyleSheets = [sheet];  // *** uncomment to see the effect
+
+        const span = document.createElement("span");
+        span.textContent = "I'm in the shadow DOM";
+        shadow.appendChild(span);
+        </script>
+</body>
+</html>
